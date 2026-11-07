@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="uz">
+    <head>
+        <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="theme-color" content="#11152b">
+        <meta name="description" content="Heirs of Al-Khwarizmi — programming and English for the next generation.">
+        
+        <title>Heirs of Al-Khwarizmi</title>
+            <link rel="stylesheet" href="css/style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="announce" data-i18n="announcement">
+            Kelajak dasturchilari uchun yangi avlod ta’limi <b>· 8-sinf o‘quvchilari uchun qabul ochiq</b>
+        </div>
+    
+        <header>
+             <div class="wrap">
+                <nav class="nav">
+                    <a class="brand" href="#home">
+                        <span class="mark">⌘</span>
+                        <span>HEIRS OF<br>AL-KHWARIZMI<small>LEARN · BUILD · LEAD</small></span>
+                    </a>
+                    <div class="links" id="links">
+                        <a href="#programs" data-i18n="navCourses">Kurslar</a>
+                        <a href="#journey" data-i18n="navJourney">O‘quv yo‘li</a>
+                        <a href="#admissions" data-i18n="navAdmission">Qabul</a>
+                        <a href="#about" data-i18n="navAbout">Loyiha haqida</a>
+                    </div>
+                    <div class="actions">
+                        <select id="language" aria-label="Language">
+                            <option value="uz">UZ</option>
+                            <option value="ru">RU</option>
+                            <option value="en">EN</option>
+                        </select>
+                        <button class="btn theme-toggle" id="themeToggle" type="button" aria-label="Tungi rejimga o‘tish" title="Tungi rejimga o‘tish" aria-pressed="false">☾</button>
+                        <button class="btn" data-auth="login" data-i18n="login">Kirish</button>
+                        <button class="btn primary" data-auth="signup" data-i18n="signup">Ro‘yxatdan o‘tish</button>
+                        <button class="menu" id="menu" aria-label="Menu">☰</button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="hero" id="home">
+                <div class="wrap">
+                    <div class="hero-grid">
+                        <div>
+                            <div class="pill">
+                                <i></i>
+                                <span data-i18n="eyebrow">8-sinf o‘quvchilari uchun tanlov</span>
+                            </div>
+                            <h1 data-i18n="heroTitle">Bugun o‘rgan.<br>Ertaga <span class="accent">yarat.</span></h1>
+                            <p class="hero-copy" data-i18n="heroCopy">Heirs of Al-Khwarizmi — maktab o‘quvchilarini dasturlash va ingliz tiliga o‘rgatib, kelajak kasblariga tayyorlaydigan to‘rt yillik ta’lim dasturi.</p>
+                            <div class="hero-ctas">
+                                <a class="btn primary" href="#admissions" data-i18n="heroCta">Dastur bilan tanishish →</a>
+                                <a class="btn" href="#programs" data-i18n="explore">Kurslarni ko‘rish</a>
+                            </div>
+                            
+                            <div class="note">
+                                <div class="faces">
+                                    <span>👩🏻‍💻</span>
+                                    <span>👨🏽‍💻</span>
+                                    <span>👩🏾‍💻</span>
+                                </div>
+                                <span data-i18n="heroNote">Iqtidorli yoshlar uchun · 4 yillik dastur</span>
+                            </div>
+                        </div>
+                        <div class="art">
+                            <div class="orbit"></div>
+                            <div class="float one">✦ Amaliy loyihalar<small>G‘oyadan tayyor mahsulotgacha</small></div>
+                            <div class="float two">◎ English + IT<small>Global imkoniyatlar sari</small></div>
+                            <div class="code">
+                                <div class="dots">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </div>
+                                <div class="code-lines"><b>const</b> 
+                                    future = {<br>&nbsp;&nbsp;curiosity: <em>'always'</em>,<br>&nbsp;&nbsp;skills: [<strong>'code'</strong>, <strong>'create'</strong>],<br>&nbsp;&nbsp;potential: <em>'limitless'</em><br>};<br><br><b>build</b>(future); 
+                                    <span style="color:#d8ff75">// your story starts here</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div class="stat">
+                            <strong>4 yil</strong>
+                            <span data-i18n="stat1">8-sinfdan 11-sinfgacha</span>
+                        </div>
+                        <div class="stat">
+                            <strong>12+</strong>
+                            <span data-i18n="stat2">Zamonaviy yo‘nalishlar</span>
+                        </div>
+                        <div class="stat">
+                            <strong>2 til</strong>
+                            <span data-i18n="stat3">Dasturlash va ingliz tili</span>
+                        </div>
+                        <div class="stat">
+                            <strong>Portfolio</strong>
+                            <span data-i18n="stat4">Bitiruvga tayyor ishlar</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="programs" id="programs">
+                <div class="wrap">
+                    <div class="head">
+                        <div class="kicker" data-i18n="programKicker">O‘QUV DASTURI</div>
+                        <h2 data-i18n="programTitle">Qiziqishingizni kasbga aylantiring</h2>
+                        <p data-i18n="programCopy">Har bir sinf uchun puxta tuzilgan yo‘nalishlar. Sinfni tanlang va o‘quv rejasini ko‘ring.</p>
+                    </div>
+                    <div class="tabs" role="tablist">
+                        <button class="tab active" data-grade="8">8-sinf</button>
+                        <button class="tab" data-grade="9">9-sinf</button>
+                        <button class="tab" data-grade="10">10-sinf</button>
+                        <button class="tab" data-grade="11">11-sinf</button>
+                    </div>
+                    <div class="courses" id="courses"></div>
+                    <div class="course-action">
+                        <button class="text-button" data-auth="signup" data-i18n="courseCta">Dasturga ariza topshirish →</button>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="journey" id="journey">
+                <div class="wrap journey-grid">
+                    <div class="journey-copy">
+                        <div class="kicker" data-i18n="journeyKicker">TO‘RT YILLIK YO‘L</div>
+                        <h2 data-i18n="journeyTitle">Maktabdan IT karyerasigacha</h2>
+                        <p data-i18n="journeyCopy">Bosqichma-bosqich o‘rganing, haqiqiy loyihalar yarating va bitiruvga kelib o‘z portfolioingizga ega bo‘ling.</p>
+                        <div class="points">
+                            <div class="point">
+                                <span class="check">✓</span>
+                                <span data-i18n="point1">Har hafta amaliy mashg‘ulotlar</span>
+                            </div>
+                            <div class="point">
+                                <span class="check">✓</span>
+                                <span data-i18n="point2">Dasturlash bilan birga ingliz tili</span>
+                            </div>
+                            <div class="point">
+                                <span class="check">✓</span>
+                                <span data-i18n="point3">Mentorlar va portfolio loyihalari</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="years">
+                        <article class="year">
+                            <div class="year-top">
+                                <span class="year-num">08</span>
+                                <span class="tag" data-i18n="foundation">ASOSLAR</span>
+                            </div>
+                            <h3 data-i18n="y8">Poydevor yarating</h3>
+                            <p data-i18n="y8copy">Computer Science, Full-stack va ingliz tili.</p>
+                        </article>
+                        <article class="year">
+                            <div class="year-top">
+                                <span class="year-num">09</span>
+                                <span class="tag" data-i18n="exploreTag">IZLANISH</span>
+                            </div>
+                            <h3 data-i18n="y9">Yo‘nalishingizni toping</h3>
+                            <p data-i18n="y9copy">Dizayn, backend, Android, BI, o‘yinlar va IoT.</p>
+                        </article>
+                        <article class="year">
+                            <div class="year-top">
+                                <span class="year-num">10</span>
+                                <span class="tag" data-i18n="specialize">IXTISOSLASHUV</span>
+                            </div>
+                            <h3 data-i18n="y10">Chuqur bilim oling</h3>
+                            <p data-i18n="y10copy">Python, kiberxavfsizlik, ML, DevOps va boshqalar.</p>
+                        </article>
+                        <article class="year">
+                            <div class="year-top">
+                                <span class="year-num">11</span>
+                                <span class="tag" data-i18n="career">KARYERAGA TAYYOR</span>
+                            </div>
+                            <h3 data-i18n="y11">Kelajakka qadam qo‘ying</h3>
+                            <p data-i18n="y11copy">Professional IT, portfolio va ishga tayyorgarlik.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="admissions" id="admissions">
+                <div class="wrap">
+                    <div class="head">
+                        <div class="kicker" data-i18n="admissionKicker">QABUL JARAYONI</div>
+                        <h2 data-i18n="admissionTitle">Birinchi qadamni qo‘ying</h2>
+                        <p data-i18n="admissionCopy">Dasturga qabul tanlov va bilimni aniqlash testi orqali amalga oshiriladi.</p>
+                    </div>
+                    <div class="steps">
+                        <article class="step">
+                            <div class="step-num">01</div>
+                            <h3 data-i18n="step1title">Ariza qoldiring</h3>
+                            <p data-i18n="step1copy">O‘quvchi va ota-ona ma’lumotlarini kiriting. Biz siz bilan keyingi bosqichlar bo‘yicha bog‘lanamiz.</p>
+                        </article>
+                        <article class="step">
+                            <div class="step-num">02</div>
+                            <h3 data-i18n="step2title">Tanlov testidan o‘ting</h3>
+                            <p data-i18n="step2copy">Mantiqiy fikrlash va tayyorgarlikni aniqlash uchun test topshiring.</p>
+                        </article>
+                        <article class="step">
+                            <div class="step-num">03</div>
+                            <h3 data-i18n="step3title">O‘qishni boshlang</h3>
+                            <p data-i18n="step3copy">Qabul qilingach, to‘rt yillik ta’lim va loyihalar olamiga qo‘shiling.</p>
+                        </article>
+                    </div>
+                    <div class="eligibility" data-i18n="eligibility">
+                        <strong>Kimlar topshira oladi?</strong> Faqat 8-sinf o‘quvchilari. Qabul tanlov asosida.
+                    </div>
+                </div>
+            </section>
+            
+            <section class="cta" id="about">
+                <div class="wrap">
+                    <div class="cta-box">
+                        <div>
+                            <h2 data-i18n="ctaTitle">Kelajakni birga quramizmi?</h2>
+                            <p data-i18n="ctaCopy">Dastur haqida ko‘proq bilish va ariza qoldirish uchun ro‘yxatdan o‘ting.</p>
+                        </div>
+                        <a href="#" class="btn" data-auth="signup" data-i18n="ctaButton">Ariza topshirish →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="wrap footer-row">
+                <a class="brand" href="#home">
+                    <span class="mark">⌘</span>
+                    <span>HEIRS OF AL-KHWARIZMI<small>LEARN · BUILD · LEAD</small></span>
+                </a>
+                <span data-i18n="copyright">© 2025 Heirs of Al-Khwarizmi. Barcha huquqlar himoyalangan.</span>
+                <div class="footer-links">
+                    <a href="#programs" data-i18n="navCourses">Kurslar</a>
+                    <a href="#admissions" data-i18n="navAdmission">Qabul</a>
+                    <a href="mailto:hello@heirsoalkhwarizmi.uz">Email ↗</a>
+                </div>
+            </div>
+        </footer>
+        
+        <div class="backdrop" id="backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal">
+                <button class="close" id="close" aria-label="Close">×</button>
+                <div class="brand">
+                    <span class="mark">⌘</span>
+                    <span>HEIRS OF<br>AL-KHWARIZMI<small>LEARN · BUILD · LEAD</small></span>
+                </div>
+                <h2 id="modalTitle"></h2>
+                <p class="sub" id="modalSub"></p>
+                <form class="form" id="authForm"></form>
+                <p class="message" id="message"></p>
+                <p class="switch" id="switchMode"></p>
+            </div>
+        </div>
+        <script src="js/script.js" defer></script>
+    </body>
+</html>
