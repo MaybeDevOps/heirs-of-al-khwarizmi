@@ -111,7 +111,7 @@ header {
 
 .brand small {
   display: block;
-  color: #89899b;
+  color: var(--muted);
   font: 600 8px 'DM Sans';
   letter-spacing: 1.5px;
   margin-top: 4px;
@@ -731,7 +731,7 @@ section {
 .cta .btn {
   background: var(--lime);
   border-color: var(--lime);
-  color: var(--ink);
+  color: #15172f;
   position: relative;
 }
 
@@ -1049,20 +1049,39 @@ section {
   }
 }
 
-/* ===================== RESPONSIVE: max 390px ===================== */
-@media (max-width: 390px) {
+/* ===================== RESPONSIVE: max 420px ===================== */
+@media (max-width: 420px) {
+  .nav {
+    gap: 8px;
+  }
+
   .brand {
-    font-size: 11px;
+    gap: 7px;
+    font-size: 10px;
   }
 
   .mark {
-    width: 33px;
-    height: 33px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .actions {
+    gap: 3px;
   }
 
   .actions .btn {
-    font-size: 9px;
-    padding: 8px;
+    font-size: 8px;
+    padding: 6px 4px;
+  }
+
+  .actions .theme-toggle {
+    width: 30px;
+    min-width: 30px;
+    padding: 0;
+  }
+
+  .menu {
+    font-size: 20px;
   }
 
   .courses {
