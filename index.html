@@ -36,8 +36,8 @@
                             <option value="en">EN</option>
                         </select>
                         <button class="btn theme-toggle" id="themeToggle" type="button" aria-label="Tungi rejimga o‘tish" title="Tungi rejimga o‘tish" aria-pressed="false">☾</button>
-                        <button class="btn" data-auth="login" data-i18n="login">Kirish</button>
-                        <button class="btn primary" data-auth="signup" data-i18n="signup">Ro‘yxatdan o‘tish</button>
+                        <a class="btn" href="auth.html?mode=login" data-i18n="login">Kirish</a>
+                        <a class="btn primary" href="auth.html?mode=signup" data-i18n="signup">Ro‘yxatdan o‘tish</a>
                         <button class="menu" id="menu" aria-label="Menu">☰</button>
                     </div>
                 </nav>
@@ -121,7 +121,7 @@
                     </div>
                     <div class="courses" id="courses"></div>
                     <div class="course-action">
-                        <button class="text-button" data-auth="signup" data-i18n="courseCta">Dasturga ariza topshirish →</button>
+                        <a class="text-button" href="auth.html?mode=signup" data-i18n="courseCta">Dasturga ariza topshirish →</a>
                     </div>
                 </div>
             </section>
@@ -221,7 +221,7 @@
                             <h2 data-i18n="ctaTitle">Kelajakni birga quramizmi?</h2>
                             <p data-i18n="ctaCopy">Dastur haqida ko‘proq bilish va ariza qoldirish uchun ro‘yxatdan o‘ting.</p>
                         </div>
-                        <a href="#" class="btn" data-auth="signup" data-i18n="ctaButton">Ariza topshirish →</a>
+                        <a href="auth.html?mode=signup" class="btn" data-i18n="ctaButton">Ariza topshirish →</a>
                     </div>
                 </div>
             </section>
@@ -242,20 +242,6 @@
             </div>
         </footer>
         
-        <div class="backdrop" id="backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-            <div class="modal">
-                <button class="close" id="close" aria-label="Close">×</button>
-                <div class="brand">
-                    <img class="brand-logo" src="images/AL-XORAZMIY VORISLARI LOGO.jpeg" alt="Al-Xorazmiy Vorislari logotipi">
-                    <span>AL-XORAZMIY<br>VORISLARI<small>LEARN · BUILD · LEAD</small></span>
-                </div>
-                <h2 id="modalTitle"></h2>
-                <p class="sub" id="modalSub"></p>
-                <form class="form" id="authForm"></form>
-                <p class="message" id="message"></p>
-                <p class="switch" id="switchMode"></p>
-            </div>
-        </div>
         <script src="js/script.js" defer></script>
     </body>
 </html>

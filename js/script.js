@@ -316,9 +316,6 @@ function setLanguage(l) {
 
   renderCourses(document.querySelector('.tab.active').dataset.grade);
 
-  if (backdrop.classList.contains('open')) {
-    openAuth(document.getElementById('mode').value);
-  }
 }
 
 /* ===================== GRADE TABS ===================== */
@@ -334,88 +331,6 @@ renderCourses(8);
 
 document.getElementById('language').addEventListener('change', e => {
   setLanguage(e.target.value);
-});
-
-/* ===================== AUTH MODAL ===================== */
-const backdrop = document.getElementById('backdrop');
-
-function openAuth(mode) {
-  const signup = mode === 'signup';
-
-  document.getElementById('modalTitle').textContent = tr(signup ? 'signupTitle' : 'loginTitle');
-  document.getElementById('modalSub').textContent = tr(signup ? 'signupSub' : 'loginSub');
-  document.getElementById('message').textContent = '';
-
-  document.getElementById('authForm').innerHTML = `
-    <input type="hidden" id="mode" value="${mode}">
-    ${signup ? `
-      <label>${tr('name')}
-        <input name="name" required autocomplete="name">
-      </label>
-      <label>${tr('phone')}
-        <input name="phone" required type="tel" autocomplete="tel">
-      </label>` : ''}
-    <label>${tr('email')}
-      <input name="email" required type="email" autocomplete="email">
-    </label>
-    <label>${tr('password')}
-      <input name="password" required type="password" minlength="6" autocomplete="${signup ? 'new-password' : 'current-password'}">
-    </label>
-    ${signup ? `
-      <label>${tr('gradeLabel')}
-        <select name="grade" required>
-          <option value="">${tr('choose')}</option>
-          <option value="8">8${tr('grade')}</option>
-        </select>
-      </label>` : ''}
-    <button type="submit" class="btn primary submit">${tr(signup ? 'send' : 'enter')}</button>`;
-
-  document.getElementById('switchMode').innerHTML = tr(signup ? 'switchLogin' : 'switchSignup');
-
-  backdrop.classList.add('open');
-  document.body.style.overflow = 'hidden';
-
-  setTimeout(() => {
-    document.querySelector('#authForm input:not([type=hidden])')?.focus();
-  }, 50);
-}
-
-/* ---------- Open / switch auth via data attributes ---------- */
-document.addEventListener('click', e => {
-  const a = e.target.closest('[data-auth]');
-  if (a) {
-    e.preventDefault();
-    openAuth(a.dataset.auth);
-  }
-
-  const s = e.target.closest('[data-switch]');
-  if (s) {
-    openAuth(s.dataset.switch);
-  }
-});
-
-/* ---------- Form submit (demo) ---------- */
-document.getElementById('authForm').addEventListener('submit', e => {
-  e.preventDefault();
-  const mode = document.getElementById('mode').value;
-  document.getElementById('message').textContent = tr(mode === 'signup' ? 'success' : 'loginSuccess');
-  e.target.querySelector('button').disabled = true;
-});
-
-/* ---------- Close modal ---------- */
-function closeModal() {
-  backdrop.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-document.getElementById('close').addEventListener('click', closeModal);
-
-backdrop.addEventListener('click', e => {
-  if (e.target === backdrop) closeModal();
-});
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeModal();
 });
 
 /* ===================== MOBILE MENU ===================== */

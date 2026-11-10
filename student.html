@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11152b">
+  <title>O‘quvchi kabineti — Al-Xorazmiy Vorislari</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="portal-page" data-role="student">
+  <main class="portal-shell">
+    <header class="portal-top">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="images/AL-XORAZMIY VORISLARI LOGO.jpeg" alt="">
+        <span>AL-XORAZMIY<br>VORISLARI<small>LEARN · BUILD · LEAD</small></span>
+      </a>
+      <button class="btn" id="signOut" type="button">Chiqish</button>
+    </header>
+    <section class="portal-card" aria-labelledby="portalTitle">
+      <span class="portal-role">O‘QUVCHI KABINETI</span>
+      <h1 id="portalTitle">Yuklanmoqda…</h1>
+      <p class="portal-intro" id="portalIntro" role="status" aria-live="polite">Hisob ma’lumotlari tekshirilmoqda.</p>
+      <div class="portal-details" id="portalDetails" hidden></div>
+      <div class="portal-status" id="portalStatus" hidden></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/portal.js" defer></script>
+</body>
+</html>

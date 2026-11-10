@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11152b">
+  <title>Kirish yoki ro‘yxatdan o‘tish — Al-Xorazmiy Vorislari</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+    <section class="auth-card" aria-labelledby="authTitle">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="images/AL-XORAZMIY VORISLARI LOGO.jpeg" alt="">
+        <span>AL-XORAZMIY<br>VORISLARI<small>LEARN · BUILD · LEAD</small></span>
+      </a>
+      <h1 id="authTitle">Xush kelibsiz!</h1>
+      <p class="auth-intro" id="authIntro">Hisobingizga kirish yoki yangi hisob yaratish uchun ma’lumotlarni kiriting.</p>
+      <form class="auth-form" id="authForm">
+        <label for="role">Hisob turi</label>
+        <select id="role" name="role" required>
+          <option value="student">O‘quvchi</option>
+          <option value="teacher">O‘qituvchi</option>
+        </select>
+        <fieldset id="signupFields" disabled>
+          <label for="username">Foydalanuvchi nomi</label>
+          <input id="username" name="username" autocomplete="username" minlength="3" maxlength="30" pattern="[A-Za-z0-9_]+" required>
+          <label for="displayName">To‘liq ism</label>
+          <input id="displayName" name="displayName" autocomplete="name" maxlength="100" required>
+          <label id="gradeLabel" for="grade">Sinf</label>
+          <select id="grade" name="grade">
+            <option value="8">8-sinf</option>
+          </select>
+          <label id="subjectLabel" for="subject" hidden>Mutaxassislik</label>
+          <input id="subject" name="subject" maxlength="100" placeholder="Masalan, matematika" hidden>
+        </fieldset>
+        <label for="email">Elektron pochta</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="password">Parol</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" required>
+        <button class="btn primary submit" id="submitButton" type="submit">Kirish</button>
+      </form>
+      <p class="auth-message" id="authMessage" role="status" aria-live="polite"></p>
+      <p class="auth-switch">
+        <span id="switchPrompt">Hisobingiz yo‘qmi?</span>
+        <button id="switchMode" type="button">Ro‘yxatdan o‘tish</button>
+      </p>
+      <p class="portal-footer"><a href="index.html">← Bosh sahifaga qaytish</a></p>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/auth.js" defer></script>
+</body>
+</html>
